@@ -5,7 +5,9 @@
 {% for product in products %}
 <div class="product">
 <figure class="product__figure">
-    <img class="product__image" src="{{ product.image }}" alt="need to add alt">
+    <a href="product/{{product.id}}">
+        <img class="product__image" src="{{ product.image }}" alt="need to add alt">
+    </a>
 </figure>
 </div>
 {% endfor %}
