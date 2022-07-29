@@ -7,12 +7,10 @@
     <title>Natural - Clothes</title>
 </head>
 <body>
-   {% for product in products %}
-   <div class="product">
-    <figure class="product__figure">
-        <img class="product__image" src="{{ product.image }}" alt="need to add alt">
-    </figure>
-   </div>
-   {% endfor %}
+   {% include 'nav.html' %}
+
+   {% block content %}
+
+   {% endblock %}
 </body>
 </html>

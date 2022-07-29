@@ -4,4 +4,4 @@ from core.models import Product
 
 def home(request):
     products = Product.objects.all()
-    return render(request, 'index.html', context={'products': products})
+    return render(request, 'core/home.html', context={'products': products})
