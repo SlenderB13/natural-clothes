@@ -14,7 +14,7 @@
                 </div>
                 <div class="product__card__right">
                     <h3 class="product__card__right__title">
-                        {{ product.name }}
+                        {{ product.name|upper }}
                         <span class="product__card__right__price"> - $ {{ product.price }}</span>
                     </h3>
                     <a class="product__card__right__remove__btn" href="{% url 'remove_product' id=product.id %}">REMOVE</a>

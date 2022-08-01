@@ -8,7 +8,7 @@
             <img class="product__detail__image" src="{{ product.image }}" alt="need to add alt">
         </figure>
     <div class="product__detail__right">
-        <h2 class="product__detail__name">{{ product.name }}</h2>
+        <h2 class="product__detail__name">{{ product.name|upper }}</h2>
         <p class="product__detail__description">{{ product.description }}</p>
         <p class="product__detail__price">$ {{ product.price }}</p>
         <button class="product__add__btn">
