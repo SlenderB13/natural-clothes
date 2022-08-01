@@ -17,5 +17,5 @@ def remove_product(request, id):
 
 def bag(request):
     products = cart.products.all()
-    total = products.aggregate(Sum('price'))
+    total = products.aggregate(Sum('price'))['price__sum'] or 0.0
     return render(request, 'cart/cart.html', context={'products': products, 'total': total})
