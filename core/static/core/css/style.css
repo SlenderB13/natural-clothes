@@ -25,3 +25,50 @@
     width: 48rem;
     height: 64rem;
 }
+
+/* product page */
+.product__detail {
+    height: 64rem;
+    width: 100rem;
+    display: flex;
+    margin: 16rem 0 0 28rem;
+}
+
+.product__detail__right {
+    height: 42rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product__detail__figure, .product__detail__image {
+    height: 64rem;
+    width: 48.1rem;
+}
+
+.product__detail__name {
+    width: 26.2rem;
+    font-size: 6.4rem;
+}
+
+.product__detail__description {
+    font-family: 'Clash-Display-Regular';
+    width: 27.7rem;
+    font-size: 2rem;
+}
+
+.product__detail__price {
+    font-family: 'Clash-Display-Regular';
+    font-size: 3.6rem;
+}
+
+.product__add__btn {
+    width: 36rem;
+    height: 6.6rem;
+    font-family: 'Clash-Display-Regular';
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+    border: 2px solid #000;
+    background-color: transparent;
+    margin-bottom: 4rem;
+}

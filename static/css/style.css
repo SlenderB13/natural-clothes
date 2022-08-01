@@ -3,6 +3,11 @@
     src: url('../fonts/clash-display-medium.woff');
 }
 
+@font-face {
+    font-family: 'Clash-Display-Regular';
+    src: url('../fonts/clash-display-regular.woff');
+}
+
 html, h1, h2, h3, p {
     margin: 0;
 	padding: 0;
