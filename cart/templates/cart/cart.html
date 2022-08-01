@@ -15,16 +15,18 @@
                 <div class="product__card__right">
                     <h3 class="product__card__right__title">
                         {{ product.name }}
-                        <span class="product__card__right__price">{{ product.price }}</span>
+                        <span class="product__card__right__price"> - $ {{ product.price }}</span>
                     </h3>
-                    <button class="product__card__right__remove__btn">
-                        <a href="{% url 'remove_product' id=product.id %}">REMOVE</a>
-                    </button>
+                    <a class="product__card__right__remove__btn" href="{% url 'remove_product' id=product.id %}">REMOVE</a>
                 </div>
             </div>
+            <hr class="separator">
         {% endfor %}
     </div>
-    <h3 class="cart__total">YOUR TOTAL: {{ total }}</h2>
+    <h3 class="cart__total">YOUR TOTAL: <span class="cart__total__span"> $ {{ total }}</span></h2>
+    <button class="proceed__to__payment">
+        <a href="#">PROCEED TO PAYMENT</a>
+    </button>
 </div>
 
 {% endblock %}

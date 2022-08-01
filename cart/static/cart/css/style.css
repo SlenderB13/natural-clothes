@@ -1,0 +1,71 @@
+.cart__wrapper {
+    height: 64rem;
+    width: 50rem;
+    margin: 16rem 0 0 78rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart__title {
+    font-family: 'Clash-Display-Regular';
+    font-size: 6.4rem;
+}
+
+
+.cart__products {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__card {
+    display: flex;
+}
+
+.product__card__left__figure, .product__card__left__image {
+    height: 8rem;
+    width: 13rem;
+    object-fit: cover;
+}
+
+.product__card__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8rem;
+}
+
+.product__card__right__title, .product__card__right__price {
+    font-family: 'Clash-Display-Light';
+    font-size: 2rem;
+}
+
+.product__card__right__remove__btn {
+    font-size: 1.8rem;
+    letter-spacing: 0.12rem;
+}
+
+.cart__total {
+    font-family: 'Clash-Display-Regular';
+    font-size: 3.2rem;
+}
+
+.cart__total__span {
+    font-family: 'Clash-Display-Light';
+}
+
+hr.separator {
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    height: 1px;
+    width: 100%;
+}
+
+.proceed__to__payment {
+    border: 2px solid #000;
+    background-color: transparent;
+    font-family: 'Clash-Display-Regular';
+    font-size: 2rem;
+    width: 42.5rem;
+    height: 6.6rem;
+}

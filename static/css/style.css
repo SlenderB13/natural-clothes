@@ -8,6 +8,11 @@
     src: url('../fonts/clash-display-regular.woff');
 }
 
+@font-face {
+    font-family: 'Clash-Display-Light';
+    src: url('../fonts/clash-display-light.woff');
+}
+
 html, h1, h2, h3, p {
     margin: 0;
 	padding: 0;
