@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+from cart.models import Cart, Product
+
+cart = Cart()
+cart.save()
+
+def add_product(request, id):
+    cart.products.add(Product.objects.get(id=id))
+    return render(request, 'core/home.html')
