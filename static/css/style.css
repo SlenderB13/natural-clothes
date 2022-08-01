@@ -3,7 +3,7 @@
     src: url('../fonts/clash-display-medium.woff');
 }
 
-html {
+html, h1, h2, h3, p {
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,4 +23,14 @@ a {
 
 a:hover {
     text-decoration: line-through;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav__logo {
+	font-size: 2rem;
 }
