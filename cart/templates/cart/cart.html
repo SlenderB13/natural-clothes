@@ -17,12 +17,14 @@
                         {{ product.name }}
                         <span class="product__card__right__price">{{ product.price }}</span>
                     </h3>
-                    <button class="product__card__right__remove__btn"><a href="{% url 'remove_product' id=product.id %}">REMOVE</a></button>
+                    <button class="product__card__right__remove__btn">
+                        <a href="{% url 'remove_product' id=product.id %}">REMOVE</a>
+                    </button>
                 </div>
             </div>
         {% endfor %}
     </div>
-    <h3 class="cart__total">YOUR TOTAL:</h2>
+    <h3 class="cart__total">YOUR TOTAL: {{ total|floatformat:2 }}</h2>
 </div>
 
 {% endblock %}

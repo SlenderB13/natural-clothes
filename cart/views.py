@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render
+from django.db.models import Sum
 
 from cart.models import Cart, Product
 
@@ -16,4 +17,5 @@ def remove_product(request, id):
 
 def bag(request):
     products = cart.products.all()
-    return render(request, 'cart/cart.html', context={'products': products})
+    total = products.aggregate(Sum('price'))
+    return render(request, 'cart/cart.html', context={'products': products, 'total': total})
