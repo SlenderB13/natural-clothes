@@ -3,7 +3,7 @@ from core.models import Product
 
 class Cart(models.Model):
     products = models.ManyToManyField(Product, blank=True, null=True)
-    total = models.DecimalField(max_digits=9, decimal_places=2, default=0)
+    total = models.FloatField(default=0.0)
 
     def __str__(self):
         return str(self.pk)
