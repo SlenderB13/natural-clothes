@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.db.models import Sum
 
 from cart.models import Cart, Product
@@ -8,12 +8,12 @@ cart.save()
 
 def add_product(request, id):
     cart.products.add(Product.objects.get(id=id))
-    return render(request, 'cart/cart.html')
+    return redirect('home')
 
 def remove_product(request, id):
     product = get_object_or_404(Product, pk=id)
     cart.products.remove(product)
-    return render(request, 'cart/cart.html')
+    return redirect('home')
 
 def bag(request):
     products = cart.products.all()
