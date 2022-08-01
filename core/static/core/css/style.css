@@ -1,0 +1,27 @@
+.home__title {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 6.4rem;
+    width: 44rem;
+}
+
+.product__wrapper {
+    width: 132.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -6rem 0 0 27.9rem;
+}
+
+.product__figure {
+    width: 48rem;
+    height: 64rem;
+    margin-top: 26.8rem;
+}
+
+.product__image {
+    width: 48rem;
+    height: 64rem;
+}

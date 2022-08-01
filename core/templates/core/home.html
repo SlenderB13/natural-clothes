@@ -2,14 +2,16 @@
 
 {% block content %}
 
-{% for product in products %}
-<div class="product">
-<figure class="product__figure">
-    <a href="product/{{product.id}}">
-        <img class="product__image" src="{{ product.image }}" alt="need to add alt">
-    </a>
-</figure>
+<h2 class="home__title">OUR COLLECTIONS</h2>
+
+<div class="product__wrapper">
+    {% for product in products %}
+        <figure class="product__figure">
+            <a href="product/{{product.id}}">
+                <img class="product__image" src="{{ product.image }}" alt="need to add alt">
+            </a>
+        </figure>
+    {% endfor %}
 </div>
-{% endfor %}
 
 {% endblock %}

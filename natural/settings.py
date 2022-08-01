@@ -124,6 +124,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
+    'core/static/',
+    'cart/static/'
 ]
 
 # Default primary key field type
