@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Clash-Display-Medium';
+    src: url('../fonts/clash-display-medium.woff');
+}
+
+html {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    font-size: calc(100vw / 1920 * 10);
+    font-family: 'Clash-Display-Medium';
+}
+
+a {
+	color: inherit;
+	outline: none;
+	pointer-events: auto;
+	text-decoration: none;
+
+	transition: all 1s ease-in;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
