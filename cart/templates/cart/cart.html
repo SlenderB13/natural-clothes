@@ -17,7 +17,7 @@
                         {{ product.name|upper }}
                         <span class="product__card__right__price"> - $ {{ product.price }}</span>
                     </h3>
-                    <a class="product__card__right__remove__btn" href="{% url 'remove_product' id=product.id %}">REMOVE</a>
+                    <a class="product__card__right__remove__btn" href="{% url 'cart:remove_product' id=product.id %}">REMOVE</a>
                 </div>
             </div>
             <hr class="separator">
