@@ -16,8 +16,7 @@ def remove_product(request, id):
     product = get_object_or_404(Product, pk=id)
     cart.products.remove(product)
 
-    return redirect('home')
-# voltar para o carrinho
+    return redirect('cart:bag')
 
 def bag(request):
     cart = Cart.objects.get(pk = request.session['cart_id'])
