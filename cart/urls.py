@@ -8,3 +8,4 @@ urlpatterns = [
     path('remove_product/<int:id>', remove_product, name='remove_product'),
     path('bag/', bag, name='bag'),
 ]
+#o ideal seria products/add/id

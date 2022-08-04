@@ -17,3 +17,6 @@ def home(request):
 def product(request, id):
     product = Product.objects.get(id=id)
     return render(request, 'core/product.html', context={'product': product})
+
+# services.py para o criar o carrinho
+# cuidado com o get para valores inválidos
