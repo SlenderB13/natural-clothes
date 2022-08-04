@@ -9,13 +9,16 @@ def home(request):
     except:
         cart = Cart()
         cart.save()
+
         request.session['cart_id'] = cart.pk
 
     products = Product.objects.all()
+
     return render(request, 'core/home.html', context={'products': products})
 
 def product(request, id):
     product = Product.objects.get(id=id)
+
     return render(request, 'core/product.html', context={'product': product})
 
 # services.py para o criar o carrinho
