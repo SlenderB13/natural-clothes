@@ -1,7 +1,7 @@
 .cart__wrapper {
     height: 64rem;
     width: 50rem;
-    margin: 16rem 0 0 78rem;
+    margin: 16rem auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,6 +20,12 @@
 
 .product__card {
     display: flex;
+}
+
+.cart__products__empty {
+    font-family: 'Clash-Display-Light';
+    font-size: 3rem;
+    margin-bottom: 50%;
 }
 
 .product__card__left__figure, .product__card__left__image {

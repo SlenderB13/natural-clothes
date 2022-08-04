@@ -21,12 +21,16 @@
                 </div>
             </div>
             <hr class="separator">
+            {% empty %}
+                <h1 class="cart__products__empty">There is nothing in your cart</h1>
         {% endfor %}
     </div>
-    <h3 class="cart__total">YOUR TOTAL: <span class="cart__total__span"> $ {{ total }}</span></h2>
-    <button class="proceed__to__payment">
-        <a href="#">PROCEED TO PAYMENT</a>
-    </button>
+    {% if products %}
+        <h3 class="cart__total">YOUR TOTAL: <span class="cart__total__span"> $ {{ total }}</span></h2>
+        <button class="proceed__to__payment">
+            <a href="#">PROCEED TO PAYMENT</a>
+        </button>
+    {% endif %}
 </div>
 
 {% endblock %}
