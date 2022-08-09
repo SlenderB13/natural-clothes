@@ -25,3 +25,6 @@ def bag(request):
     total = products.aggregate(Sum('price'))['price__sum'] or 0.0
 
     return render(request, 'cart/cart.html', context={'products': products, 'total': total})
+
+def avaliate(request):
+    return render(request, 'cart/avaliation.html')
