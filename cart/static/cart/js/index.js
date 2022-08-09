@@ -1,10 +1,10 @@
 CEP_API_BASE_URL = 'https://viacep.com.br/ws'
 
-$('.form-control').keyup((e) => {
-    this.code = $('.form-control').val()
+$('#postal-code-input').keyup((e) => {
+    this.code = $('#postal-code-input').val()
 })
 
-$('#check-code-btn').click((e) => {
+$('#search-code-btn').click((e) => {
     e.preventDefault()
     fetch_address(this.code)
     .then((result) => {
@@ -13,11 +13,15 @@ $('#check-code-btn').click((e) => {
 })
 
 async function fetch_address(code) {
-    const response = await fetch(`${CEP_API_BASE_URL}/${code}/json`)
+    const response = await fetch(`${CEP_API_BASE_URL}/${code}/json`, {
+        method: 'GET',
+        mode: 'cors',
+        headers: {'Content-Type': 'application/json'}
+    })
     const result = await response.json() 
     return result
 }
 
 function set_address(address) {
-    $('#address').text(`${address}`)
+    $('#address-street-input').val(`${address}`)
 }
