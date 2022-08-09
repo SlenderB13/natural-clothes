@@ -81,6 +81,7 @@ hr.separator {
 /* modal */
 .modal h5, .modal p, .modal a, .modal button, .modal form, .modal input {
     font-size: 1.5rem !important;
+    font-family: 'Arial', sans-serif;
 }
 .modal-dialog {
     transform: translate(-50%, -50%);

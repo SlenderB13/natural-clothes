@@ -19,5 +19,5 @@ async function fetch_address(code) {
 }
 
 function set_address(address) {
-    $('#address').text(`Shipping for: ${address}`)
+    $('#address').text(`${address}`)
 }
