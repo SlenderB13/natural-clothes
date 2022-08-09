@@ -28,3 +28,6 @@ def bag(request):
 
 def avaliate(request):
     return render(request, 'cart/avaliation.html')
+
+def payment(request):
+    return render(request, 'cart/payment.html')
