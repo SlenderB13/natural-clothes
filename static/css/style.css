@@ -49,6 +49,10 @@ a:hover {
 	font-size: 2rem;
 }
 
+.nav__bag__amount {
+	margin-top: 2rem;
+}
+
 .nav__bag__svg {
 	width: 3.7rem;
 	height: 3.7rem;

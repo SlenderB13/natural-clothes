@@ -39,6 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 8rem;
+    margin-left: 2rem;
 }
 
 .product__card__right__title, .product__card__right__price {
