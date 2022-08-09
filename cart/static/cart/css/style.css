@@ -75,3 +75,14 @@ hr.separator {
     width: 42.5rem;
     height: 6.6rem;
 }
+
+/* bootstrap */
+/* modal */
+.modal h5, .modal p, .modal a, .modal button, .modal form, .modal input {
+    font-size: 1.5rem !important;
+}
+.modal-dialog {
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 40%;
+}
