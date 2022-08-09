@@ -28,39 +28,8 @@
     {% if products %}
         <h3 class="cart__total">YOUR TOTAL: <span class="cart__total__span"> $ {{ total }}</span></h2>
         <button class="proceed__to__payment" data-target="#cart__modal" data-toggle="modal">
-            <a href="#">PROCEED TO PAYMENT</a>
+            <a href="{% url 'cart:payment' %}">PROCEED TO PAYMENT</a>
         </button>
-
-        {# modal #}
-        <div class="modal fade" id="cart__modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog position-absolute w-400" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Check your address</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <p class="modal__description">Insert your postal code</p>
-                    <form class="form-inline">
-                        <div class="form-group mx-sm-3 mb-2">
-                        <label for="#postal__code__input" class="sr-only">Postal Code</label>
-                        <input type="text" class="form-control" id="postal__code__input" placeholder="Postal Code">
-                        </div>
-                        <button type="submit" class="btn btn-primary mb-2" id="check-code-btn">Check code</button>
-                    </form>
-                    <p id="address"></p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">
-                    <a href="{% url 'cart:avaliate' %}">Continue</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
     {% endif %}
 </div>
 
