@@ -39,10 +39,13 @@ const set_address = (address) => {
 
 const validate_input = (input) => {
     if($(input).val() == '') {
-        $(input).addClass('is-invalid')
-    } else {
+        return $(input).addClass('is-invalid')
+    } 
+
+    if($(input).val() != '' && $(input).hasClass('is-invalid')) {
         $(input).removeClass('is-invalid')
-        $(input).addClass('is-valid')
-        $('#avaliationModal').modal('show')
-    }
+        return $(input).addClass('is-valid')
+    } 
+
+    return $(input).addClass('is-valid')
 }
