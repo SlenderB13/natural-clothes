@@ -1,16 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 
+from .services import create_cart
+
 from core.models import Product
 from cart.models import Cart
 
 def home(request):
-    try:
-        cart_id = request.session['cart_id']
-    except:
-        cart = Cart()
-        cart.save()
-
-        request.session['cart_id'] = cart.pk
+    create_cart(request)
 
     products = Product.objects.all()
 
