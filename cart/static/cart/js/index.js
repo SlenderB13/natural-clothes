@@ -21,7 +21,7 @@ $('#finish-btn').click(() => {
     })
 })
 
-async function fetch_address(code) {
+const fetch_address = async (code) => {
     const response = await fetch(`${CEP_API_BASE_URL}/${code}/json`, {
         method: 'GET',
         mode: 'cors',
@@ -31,11 +31,11 @@ async function fetch_address(code) {
     return result
 }
 
-function set_address(address) {
+const set_address = (address) => {
     $('#address-street-input').val(`${address}`)
 }
 
-function validate_input(input) {
+const validate_input = (input) => {
     if($(input).val() == '') {
         $(input).addClass('is-invalid')
     } else {
