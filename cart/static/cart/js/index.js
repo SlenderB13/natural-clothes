@@ -1,14 +1,16 @@
 CEP_API_BASE_URL = 'https://viacep.com.br/ws'
 
 // get postal code
+code = ''
 $('#postal-code-input').keyup((e) => {
-    this.code = $('#postal-code-input').val()
+    code = $('#postal-code-input').val()
+    return code
 })
 
 // use postal code to fetch with viaCep API
 $('#search-code-btn').click((e) => {
     e.preventDefault()
-    fetch_address(this.code)
+    fetch_address(code)
     .then((result) => {
         set_address(result.logradouro)
     })
