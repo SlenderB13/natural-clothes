@@ -10,9 +10,9 @@ $('#postal-code-input').keyup((e) => {
 // use postal code to fetch with viaCep API
 $('#search-code-btn').click((e) => {
     e.preventDefault()
-    fetch_address(code)
-    .then((result) => {
-        set_address(result.logradouro)
+    const request = fetch_address(code)
+    .then((response) => {
+        set_address(response.logradouro)
     })
 })
 
@@ -24,13 +24,14 @@ $('#finish-btn').click(() => {
 })
 
 const fetch_address = async (code) => {
-    const response = await fetch(`${CEP_API_BASE_URL}/${code}/json`, {
-        method: 'GET',
-        mode: 'cors',
-        headers: {'Content-Type': 'application/json'}
+    const request = await $.ajax({
+        url: `${CEP_API_BASE_URL}/${code}/json`,
+        dataType: 'json',
+        success: (result) => {
+            return result
+        }
     })
-    const result = await response.json() 
-    return result
+    return request
 }
 
 const set_address = (address) => {
