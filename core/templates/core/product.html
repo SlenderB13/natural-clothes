@@ -12,7 +12,7 @@
         <p class="product__detail__description">{{ product.description }}</p>
         <p class="product__detail__price">$ {{ product.price }}</p>
         <button class="product__add__btn">
-            <a href="{% url 'cart:add_product' product.id %}">ADD TO BAG</a>
+            <a href="{% url 'add' product.id %}">ADD TO BAG</a>
         </button>
     </div>
 </div>

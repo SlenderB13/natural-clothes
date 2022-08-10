@@ -3,7 +3,7 @@ from django.db.models import Sum
 
 from cart.models import Cart, Product
 
-def add_product(request, id):
+def add(request, id):
     cart = Cart.objects.get(pk = request.session['cart_id'])
 
     product = get_object_or_404(Product, pk=id)
@@ -11,7 +11,7 @@ def add_product(request, id):
 
     return redirect('home')
 
-def remove_product(request, id):
+def remove(request, id):
     cart = Cart.objects.get(pk = request.session['cart_id'])
 
     product = get_object_or_404(Product, pk=id)
