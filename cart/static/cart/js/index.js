@@ -41,5 +41,6 @@ function validate_input(input) {
     } else {
         $(input).removeClass('is-invalid')
         $(input).addClass('is-valid')
+        $('#avaliationModal').modal('show')
     }
 }
