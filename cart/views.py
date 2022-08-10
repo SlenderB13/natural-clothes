@@ -6,7 +6,8 @@ from cart.models import Cart, Product
 def add_product(request, id):
     cart = Cart.objects.get(pk = request.session['cart_id'])
 
-    cart.products.add(Product.objects.get(id=id))
+    product = get_object_or_404(Product, pk=id)
+    cart.products.add(product)
 
     return redirect('home')
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from core.models import Product
 from cart.models import Cart
@@ -17,9 +17,8 @@ def home(request):
     return render(request, 'core/home.html', context={'products': products})
 
 def product(request, id):
-    product = Product.objects.get(id=id)
+    product = get_object_or_404(Product, pk=id)
 
     return render(request, 'core/product.html', context={'product': product})
 
 # services.py para o criar o carrinho
-# cuidado com o get para valores inválidos
