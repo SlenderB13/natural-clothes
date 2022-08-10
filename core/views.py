@@ -12,7 +12,7 @@ def home(request):
 
     return render(request, 'core/home.html', context={'products': products})
 
-def product(request, id):
+def products(request, id):
     product = get_object_or_404(Product, pk=id)
 
     return render(request, 'core/product.html', context={'product': product})
