@@ -34,4 +34,8 @@ def payment(request):
     return render(request, 'cart/payment.html')
 
 def success(request):
+    cart = Cart.objects.get(pk = request.session['cart_id'])
+
+    products = cart.products.clear()
+
     return render(request, 'cart/success.html')
