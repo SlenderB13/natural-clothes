@@ -32,3 +32,6 @@ def avaliate(request):
 
 def payment(request):
     return render(request, 'cart/payment.html')
+
+def success(request):
+    return render(request, 'cart/success.html')
